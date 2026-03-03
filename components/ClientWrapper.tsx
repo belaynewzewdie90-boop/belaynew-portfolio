@@ -1,0 +1,17 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
+
+export default function ClientWrapper({ children }: { children: ReactNode }) {
+  return (
+    <motion.div
+      className="relative min-h-screen w-full overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
